@@ -93,13 +93,9 @@
         <span class="where">Visit the game page</span>
       </a>
       <div class="proj-side">
-        <div class="proj cream">
+        <div class="proj cream" style="height:100%;justify-content:flex-end">
           <h3>Oleksa Sync for KeyCRM</h3>
           <p>A free WordPress plugin that keeps WooCommerce orders, products and stock in sync with KeyCRM. Published in the wordpress.org plugin directory.</p>
-        </div>
-        <div class="proj mint">
-          <h3>Mailjet integrations</h3>
-          <p>Maintaining Mailjet plugins and SDKs for Drupal, WordPress, PrestaShop, Laravel, Joomla and Node.js.</p>
         </div>
       </div>
     </div>
@@ -144,7 +140,7 @@ const TECH = [
   { id: "ts",   sym: "Ts", name: "TypeScript", layer: "lang", depth: 3, note: "Default for anything new on Node. Strict types on service contracts, DTOs and shared SDKs.", pairs: ["node","nest","vue"] },
   { id: "node", sym: "No", name: "Node.js",    layer: "lang", depth: 3, note: "APIs, workers and integrations. Comfortable with the event loop, streams, worker threads and hunting memory leaks.", pairs: ["ts","nest","rabbit"] },
   { id: "nest", sym: "Ne", name: "NestJS",     layer: "lang", depth: 3, note: "Main framework for the microservices I extracted from a large PHP monolith: modules, guards, queues, OpenTelemetry tracing.", pairs: ["ts","pg","rabbit","docker"] },
-  { id: "laravel", sym: "Lv", name: "Laravel", layer: "lang", depth: 2, note: "Laravel apps and packages, including a Mailjet SDK integration for Laravel.", pairs: ["php","mysql"] },
+  { id: "laravel", sym: "Lv", name: "Laravel", layer: "lang", depth: 2, note: "Laravel apps and packages.", pairs: ["php","mysql"] },
   { id: "rest", sym: "Ap", name: "REST APIs",  layer: "lang", depth: 3, note: "Designing APIs and, more often, integrating with other people's: auth, retries, idempotency, webhooks, correlation IDs.", pairs: ["php","node","stripe"] },
   { id: "py",   sym: "Py", name: "Python",     layer: "lang", depth: 1, note: "Scripts for data work: migration pipelines, CSV transforms, document generation.", pairs: ["shopify","mysql"] },
 
