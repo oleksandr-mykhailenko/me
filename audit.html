@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website &amp; codebase audits — Oleksa Mykhailenko</title>
+<meta name="description" content="Independent technical audits and consulting for websites, online stores and SaaS codebases: performance, security, architecture, payments and integrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="./"><span class="mark-tile">Om</span>Oleksa Mykhailenko</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./">Engineer</a>
+      <a href="#check">Health check</a>
+      <a href="#areas">What I audit</a>
+      <a href="audit.html" aria-current="page">Audits &amp; consulting</a>
+    </nav>
+  </header>
+
+  <section class="hero audit-hero">
+    <div class="hero-row">
+      <div>
+        <h1>A senior second opinion on your website or codebase.</h1>
+        <p class="lede">I review stores, SaaS products and custom projects, then tell you plainly what's slowing you down, what's risky and what to fix first.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#check">Start the health check</a>
+          <a class="btn ghost" href="#sample">See a sample report</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>Experience</b>15 years, Tech Lead level</li>
+        <li><b>Platforms</b>WordPress, WooCommerce, Shopify, Drupal, custom PHP and Node</li>
+        <li><b>Specialty</b>Payments, checkout, integrations</li>
+        <li><b>Languages</b>English, Ukrainian</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="check">
+    <div class="section-head">
+      <div>
+        <h2>What's bothering you?</h2>
+        <p>Tick everything that sounds familiar. I'll build the audit scope as you go, and you can send it to me as a starting point.</p>
+      </div>
+    </div>
+    <div class="symptoms">
+      <div class="symptom-grid" id="symptoms" role="group" aria-label="Symptoms"></div>
+      <aside class="scope" aria-live="polite">
+        <h3 id="scopeTitle">Your audit scope</h3>
+        <p class="muted small" id="scopeHint">Nothing selected yet. Pick at least one symptom.</p>
+        <ul id="scopeList"></ul>
+        <div class="actions">
+          <button class="btn" id="copyScope" disabled>Copy my request</button>
+          <a class="btn ghost" href="https://www.threads.net/@oleksa_mykhailenko" target="_blank" rel="noopener">Message me</a>
+        </div>
+        <div class="toast" id="toast" role="status"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="section-head">
+      <div>
+        <h2>What I audit</h2>
+        <p>Each area is a self-contained review. Open one to see what I check and what you get back.</p>
+      </div>
+    </div>
+    <div class="areas" id="areaList"></div>
+  </section>
+
+  <section id="sample">
+    <div class="section-head">
+      <div>
+        <h2>What a report looks like</h2>
+        <p>Every finding gets a severity, a plain explanation and a rough effort. This is an example from a made-up WooCommerce store.</p>
+      </div>
+    </div>
+    <div class="report">
+      <div class="report-head">
+        <h3>Sample: example-store.com</h3>
+        <div class="chips" id="sevFilter" role="group" aria-label="Filter by severity">
+          <button class="chip" data-sev="all" aria-pressed="true">All</button>
+          <button class="chip" data-sev="critical" aria-pressed="false">Critical</button>
+          <button class="chip" data-sev="high" aria-pressed="false">High</button>
+          <button class="chip" data-sev="medium" aria-pressed="false">Medium</button>
+          <button class="chip" data-sev="low" aria-pressed="false">Low</button>
+        </div>
+      </div>
+      <div id="findings"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>Ways to work together</h2>
+        <p>Price depends on the size of the project. After a short call you get a fixed quote, not an hourly meter.</p>
+      </div>
+    </div>
+    <div class="formats">
+      <div class="format">
+        <h3>Quick review</h3>
+        <div class="when">One problem, answered fast</div>
+        <p class="muted">For a single area: a slow checkout, a failing integration, a plugin you're unsure about.</p>
+        <ul><li>Written findings with priorities</li><li>A 30-minute walkthrough call</li><li>Delivered within a few days</li></ul>
+      </div>
+      <div class="format featured">
+        <h3>Full audit</h3>
+        <div class="when">The whole picture</div>
+        <p>For a store or product before a relaunch, an investment round, a migration or a new team taking over.</p>
+        <ul><li>All relevant areas reviewed</li><li>Prioritised roadmap: now, next, later</li><li>Walkthrough with your team</li><li>Two weeks of follow-up questions</li></ul>
+      </div>
+      <div class="format">
+        <h3>Ongoing advisory</h3>
+        <div class="when">A tech lead on call</div>
+        <p class="muted">For founders and small teams who need architecture decisions and code review without a full-time hire.</p>
+        <ul><li>Regular review sessions</li><li>Pull request and design reviews</li><li>Help hiring and onboarding developers</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><div><h2>How it goes</h2></div></div>
+    <ol class="steps">
+      <li><b>Short call</b><span>You tell me what worries you. I tell you if I'm the right person.</span></li>
+      <li><b>Scope and access</b><span>We agree the areas, deadline and price. Read-only access is usually enough.</span></li>
+      <li><b>Review</b><span>I go through code, configuration, logs and the live site.</span></li>
+      <li><b>Report and walkthrough</b><span>You get the written report and a call to go through every finding.</span></li>
+      <li><b>Fix, if you want</b><span>I can fix the issues myself or guide your developers.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="contact">
+      <div>
+        <h2>Tell me what's going on with your project.</h2>
+        <p>Send a link and a couple of sentences. I reply with whether I can help and what I'd look at first.</p>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://www.threads.net/@oleksa_mykhailenko" target="_blank" rel="noopener">Message me on Threads</a>
+        <a class="btn ghost" href="./">See my engineering CV</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">© <span id="year"></span> Oleksa Mykhailenko. Built by hand, hosted on GitHub Pages.</footer>
+</div>
+
+<script>
+/* ============================================================
+   EDIT AUDIT AREAS AND SYMPTOMS HERE
+   ============================================================ */
+const AREAS = [
+  { id: "perf", color: "front", title: "Performance & Core Web Vitals",
+    sub: "Why pages feel slow and what it costs you in conversions.",
+    check: ["Core Web Vitals on real devices", "Slow database queries and missing indexes", "Caching: page, object, CDN", "Heavy plugins, scripts and images", "Server and PHP/Node configuration"],
+    get: ["The 5–10 changes with the biggest speed impact", "Before/after metrics for anything I fix", "A budget to keep it fast"] },
+  { id: "sec", color: "pay", title: "Security & dependencies",
+    sub: "Outdated code, risky plugins and data that's more exposed than you think.",
+    check: ["Outdated core, plugins and packages with known CVEs", "Admin access, roles and leftover accounts", "Secrets in code and config", "Input handling, file uploads, API auth", "Backups and how fast you can restore"],
+    get: ["Risk list ranked by real-world likelihood", "Update plan that won't break the site", "Hardening checklist"] },
+  { id: "arch", color: "lang", title: "Architecture & code quality",
+    sub: "Whether your codebase can survive the next two years of features.",
+    check: ["Structure, boundaries and coupling", "Test coverage where it matters", "Error handling, logging, observability", "Monolith vs services: what's actually needed", "Developer onboarding and deploy flow"],
+    get: ["Plain-language map of the system", "Refactoring plan in safe, small steps", "Notes you can hand to new developers"] },
+  { id: "pay", color: "cms", title: "Payments & checkout",
+    sub: "Declines, double charges and abandoned carts. My home turf.",
+    check: ["Gateway integration: Stripe, PayPal, NMI, Worldpay", "Decline and failure patterns in your data", "Webhooks, retries and idempotency", "Checkout UX and friction", "Refunds, reconciliation and reporting"],
+    get: ["Where you're losing payments and why", "Fixes ranked by revenue impact", "Monitoring so you hear about failures first"] },
+  { id: "store", color: "data", title: "E-commerce platform",
+    sub: "WooCommerce, Shopify, Drupal or a custom store: is it set up right?",
+    check: ["Platform choice vs your actual needs", "Plugin and app sprawl", "Product data, stock and shipping setup", "SEO basics, redirects, structured data", "Migration readiness"],
+    get: ["Keep, replace or remove list for plugins and apps", "Migration plan if moving platforms", "Quick wins for the next sale season"] },
+  { id: "int", color: "ai", title: "Integrations & APIs",
+    sub: "CRMs, warehouses, ERPs and email platforms that don't quite talk to each other.",
+    check: ["Sync logic and where data drifts", "Error handling and retries", "Rate limits and API quotas", "Queues and background jobs", "Vendor lock-in and alternatives"],
+    get: ["Diagram of how data moves", "List of silent failure points", "Plan for a reliable sync"] },
+  { id: "email", color: "infra", title: "Email & notifications",
+    sub: "Order emails that never arrive and newsletters landing in spam.",
+    check: ["Transactional email delivery path", "SPF, DKIM, DMARC", "Provider setup: Mailjet, SendGrid, SMTP", "Template and trigger logic", "Bounce and complaint handling"],
+    get: ["Why emails fail, with proof", "DNS and provider fixes", "A test plan for every customer email"] },
+  { id: "cost", color: "lang", title: "Infrastructure & cost",
+    sub: "Hosting that's too slow, too expensive, or both.",
+    check: ["Hosting and AWS setup", "Docker and deploy pipeline", "Monitoring and alerting", "Scaling for peaks", "Monthly bill line by line"],
+    get: ["Right-sized hosting plan", "Savings estimate", "Deploy process you can trust"] }
+];
+
+const SYMPTOMS = [
+  { label: "Pages load slowly", areas: ["perf", "cost"] },
+  { label: "Customers' payments fail or get declined", areas: ["pay"] },
+  { label: "Order or signup emails don't arrive", areas: ["email", "int"] },
+  { label: "We're about to migrate or relaunch", areas: ["store", "arch", "perf"] },
+  { label: "Plugins or packages haven't been updated in ages", areas: ["sec", "store"] },
+  { label: "Data doesn't match between our systems", areas: ["int"] },
+  { label: "Every new feature breaks something", areas: ["arch"] },
+  { label: "Hosting bill keeps growing", areas: ["cost"] },
+  { label: "We've been hacked or worry we might be", areas: ["sec"] },
+  { label: "Our developer left and nobody knows the code", areas: ["arch", "sec"] },
+  { label: "Carts get abandoned at checkout", areas: ["pay", "perf"] },
+  { label: "I'm buying or inheriting a project", areas: ["arch", "sec", "cost"] }
+];
+
+const FINDINGS = [
+  { sev: "critical", title: "Payment webhooks aren't verified", text: "Anyone who knows the URL can mark an order as paid. Add signature checks and reject unsigned calls.", effort: "2 hours" },
+  { sev: "critical", title: "Admin account shared by four people", text: "One password, no 2FA, no way to tell who changed what. Create personal accounts and enable 2FA.", effort: "1 hour" },
+  { sev: "high", title: "Order emails sent through PHP mail()", text: "No SPF or DKIM, so Gmail drops a third of confirmations. Route through a transactional provider.", effort: "Half a day" },
+  { sev: "high", title: "11 plugins with known vulnerabilities", text: "Three are abandoned. Update eight, replace three with maintained alternatives.", effort: "1 day" },
+  { sev: "medium", title: "Product pages make 140 database queries", text: "A related-products widget runs one query per item. Cache it and the page gets 1.8 s faster.", effort: "Half a day" },
+  { sev: "medium", title: "No staging site", text: "Updates go straight to production. Set up a staging copy with a one-click sync.", effort: "1 day" },
+  { sev: "low", title: "Images served at full camera size", text: "Enable WebP and responsive sizes. Saves about 60% of page weight on mobile.", effort: "2 hours" }
+];
+
+/* ============================================================ */
+const $ = s => document.querySelector(s);
+const areaById = Object.fromEntries(AREAS.map(a => [a.id, a]));
+const picked = new Set();
+
+// symptoms
+$("#symptoms").innerHTML = SYMPTOMS.map((s, i) =>
+  `<button class="symptom" data-i="${i}" aria-pressed="false">${s.label}</button>`).join("");
+
+function renderScope() {
+  const counts = {};
+  picked.forEach(i => SYMPTOMS[i].areas.forEach(a => counts[a] = (counts[a] || 0) + 1));
+  const ids = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  $("#scopeHint").textContent = ids.length
+    ? `${ids.length} area${ids.length > 1 ? "s" : ""} to review, most urgent first.`
+    : "Nothing selected yet. Pick at least one symptom.";
+  $("#scopeList").innerHTML = ids.map(id => {
+    const a = areaById[id];
+    return `<li style="background:var(--${a.color})"><span class="count" title="Matching symptoms">${counts[id]}</span>
+      <div><b>${a.title}</b><span>${a.sub}</span></div></li>`;
+  }).join("");
+  $("#copyScope").disabled = !ids.length;
+  document.querySelectorAll(".acc").forEach(el => el.classList.toggle("hl", !!counts[el.dataset.id]));
+  return ids;
+}
+
+$("#symptoms").addEventListener("click", e => {
+  const b = e.target.closest(".symptom"); if (!b) return;
+  const i = +b.dataset.i;
+  picked.has(i) ? picked.delete(i) : picked.add(i);
+  b.setAttribute("aria-pressed", picked.has(i));
+  renderScope(); $("#toast").textContent = "";
+});
+
+$("#copyScope").addEventListener("click", async () => {
+  const ids = renderScope();
+  const text = "Hi Oleksa, I'd like an audit.\n\nWhat's going on:\n" +
+    [...picked].map(i => "- " + SYMPTOMS[i].label).join("\n") +
+    "\n\nAreas to review:\n" + ids.map(id => "- " + areaById[id].title).join("\n") +
+    "\n\nWebsite: ";
+  try { await navigator.clipboard.writeText(text); $("#toast").textContent = "Copied. Paste it into a message to me and add your website."; }
+  catch { $("#toast").textContent = "Couldn't copy automatically. Select the list above and copy it by hand."; }
+});
+
+// areas accordion
+$("#areaList").innerHTML = AREAS.map(a => `
+  <div class="acc" data-id="${a.id}" data-open="false" style="background:var(--${a.color})">
+    <button aria-expanded="false" aria-controls="acc-${a.id}">
+      <div><h3>${a.title}</h3><p>${a.sub}</p></div><span class="plus" aria-hidden="true"></span>
+    </button>
+    <div class="acc-body" id="acc-${a.id}" role="region"><div class="acc-inner"><div class="acc-cols">
+      <div><h4>What I check</h4><ul>${a.check.map(x => `<li>${x}</li>`).join("")}</ul></div>
+      <div><h4>What you get</h4><ul>${a.get.map(x => `<li>${x}</li>`).join("")}</ul></div>
+    </div></div></div>
+  </div>`).join("");
+
+$("#areaList").addEventListener("click", e => {
+  const btn = e.target.closest(".acc > button"); if (!btn) return;
+  const acc = btn.parentElement, open = acc.dataset.open !== "true";
+  acc.dataset.open = open; btn.setAttribute("aria-expanded", open);
+});
+
+// sample report
+$("#findings").innerHTML = FINDINGS.map(f => `
+  <div class="finding" data-sev="${f.sev}">
+    <span class="sev ${f.sev}">${f.sev[0].toUpperCase() + f.sev.slice(1)}</span>
+    <div><b>${f.title}</b><p>${f.text}</p></div>
+    <span class="effort">Fix: ${f.effort}</span>
+  </div>`).join("");
+
+$("#sevFilter").addEventListener("click", e => {
+  const c = e.target.closest(".chip"); if (!c) return;
+  document.querySelectorAll("#sevFilter .chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+  document.querySelectorAll(".finding").forEach(f => f.hidden = c.dataset.sev !== "all" && f.dataset.sev !== c.dataset.sev);
+});
+
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

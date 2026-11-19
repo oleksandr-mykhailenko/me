@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oleksa Mykhailenko — Fullstack software engineer</title>
+<meta name="description" content="Interactive CV of Oleksa Mykhailenko, senior fullstack engineer: PHP, TypeScript, NestJS, Vue, payments, e-commerce and microservices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="./"><span class="mark-tile">Om</span>Oleksa Mykhailenko</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./" aria-current="page">Engineer</a>
+      <a href="#stack">Stack</a>
+      <a href="#projects">Projects</a>
+      <a href="audit.html">Audits &amp; consulting</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-row">
+      <div>
+        <h1>I build and fix the systems behind online businesses.</h1>
+        <p class="lede">Senior fullstack engineer with 15 years in PHP, TypeScript and everything around them: payments, POS, e-commerce, plugins and microservices.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#stack">Explore my stack</a>
+          <a class="btn ghost" href="audit.html">Book an audit</a>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>Based in</b>Alanya, Turkey, working remotely</li>
+        <li><b>Level</b>Senior / Tech Lead</li>
+        <li><b>Strongest in</b>Payments and SaaS backends</li>
+        <li><b>Open to</b>Remote roles and projects</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="section-head">
+      <div>
+        <h2>The periodic table of my stack</h2>
+        <p>Every tile is a technology I've shipped with. Click one to see what I did with it, or pick a problem to see which tools I'd bring.</p>
+      </div>
+    </div>
+
+    <div class="lens">
+      <div class="chips" id="problems" role="group" aria-label="Show tools by problem"></div>
+      <input class="search" id="search" type="search" placeholder="Find a technology" aria-label="Find a technology">
+    </div>
+
+    <div class="stack-layout">
+      <div>
+        <div class="table assemble" id="table"></div>
+        <div class="legend" aria-label="Depth legend">
+          <span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span>Core: daily, years deep</span>
+          <span><span class="dots"><i class="on"></i><i class="on"></i><i></i></span>Strong: shipped to production many times</span>
+          <span><span class="dots"><i class="on"></i><i></i><i></i></span>Working: used on real projects</span>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel" aria-live="polite">
+        <button class="panel-close" id="panelClose" aria-label="Close details">×</button>
+        <div id="panelBody"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <div>
+        <h2>Things you can look at</h2>
+        <p>Public work, outside of client and employer codebases.</p>
+      </div>
+    </div>
+    <div class="projects">
+      <a class="proj main" href="https://wordpress.org/plugins/oleksa-sync-for-keycrm/" target="_blank" rel="noopener">
+        <div>
+          <h3>Oleksa Sync for KeyCRM</h3>
+          <p style="margin-top:14px">A free WordPress plugin that keeps WooCommerce orders, products and stock in sync with KeyCRM. Reviewed and published in the wordpress.org plugin directory, with a usage guide built into the admin.</p>
+        </div>
+        <span class="where">View on wordpress.org</span>
+      </a>
+      <a class="proj sky" href="https://github.com/mailjet" target="_blank" rel="noopener">
+        <h3>Mailjet integrations</h3>
+        <p>Maintaining Mailjet plugins and SDKs for Drupal, WordPress, PrestaShop, Laravel, Joomla and Node.js, including releases of the Drupal contrib module.</p>
+        <span class="where">Mailjet on GitHub</span>
+      </a>
+      <a class="proj sea" href="https://github.com/oleksandr-mykhailenko/cachalot-bay" target="_blank" rel="noopener">
+        <h3>Cachalot Bay</h3>
+        <p>An iOS game in progress about the sperm whales off Mauritius, built from my own underwater filming trips.</p>
+        <span class="where">Project page</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <div>
+        <h2>Need a senior engineer on your team or project?</h2>
+        <p>Remote, full-time or project-based. I'm happiest where architecture gets debated and knowledge gets shared.</p>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://www.threads.net/@oleksa_mykhailenko" target="_blank" rel="noopener">Message me on Threads</a>
+        <a class="btn ghost" href="https://github.com/oleksandr-mykhailenko" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">© <span id="year"></span> Oleksa Mykhailenko. Built by hand, hosted on GitHub Pages.</footer>
+</div>
+
+<script>
+/* ============================================================
+   EDIT YOUR STACK HERE
+   depth: 3 = core, 2 = strong, 1 = working
+   ============================================================ */
+const LAYERS = [
+  { id: "lang",  name: "Languages & backend" },
+  { id: "front", name: "Frontend" },
+  { id: "data",  name: "Data & search" },
+  { id: "infra", name: "Infra & delivery" },
+  { id: "pay",   name: "Payments" },
+  { id: "cms",   name: "CMS & commerce" },
+  { id: "ai",    name: "AI tooling" }
+];
+
+const TECH = [
+  // Languages & backend
+  { id: "php",  sym: "Ph", name: "PHP",        layer: "lang", depth: 3, note: "My first and deepest language. Payment gateways, CMS cores, plugins, legacy monoliths and the refactors that tame them.", pairs: ["mysql","laravel","wp","drupal"] },
+  { id: "ts",   sym: "Ts", name: "TypeScript", layer: "lang", depth: 3, note: "Default for anything new on Node. Strict types on service contracts, DTOs and shared SDKs.", pairs: ["node","nest","vue"] },
+  { id: "node", sym: "No", name: "Node.js",    layer: "lang", depth: 3, note: "APIs, workers and integrations. Comfortable with the event loop, streams, worker threads and hunting memory leaks.", pairs: ["ts","nest","rabbit"] },
+  { id: "nest", sym: "Ne", name: "NestJS",     layer: "lang", depth: 3, note: "Main framework for the microservices I extracted from a large PHP monolith: modules, guards, queues, OpenTelemetry tracing.", pairs: ["ts","pg","rabbit","docker"] },
+  { id: "laravel", sym: "Lv", name: "Laravel", layer: "lang", depth: 2, note: "Laravel apps and packages, including a Mailjet SDK integration for Laravel.", pairs: ["php","mysql"] },
+  { id: "rest", sym: "Ap", name: "REST APIs",  layer: "lang", depth: 3, note: "Designing APIs and, more often, integrating with other people's: auth, retries, idempotency, webhooks, correlation IDs.", pairs: ["php","node","stripe"] },
+  { id: "py",   sym: "Py", name: "Python",     layer: "lang", depth: 1, note: "Scripts for data work: migration pipelines, CSV transforms, document generation.", pairs: ["shopify","mysql"] },
+
+  // Frontend
+  { id: "vue",  sym: "Vu", name: "Vue.js",     layer: "front", depth: 3, note: "Admin panels, dashboards and customer-facing apps. Composition API, Pinia, component libraries.", pairs: ["ts","js"] },
+  { id: "js",   sym: "Js", name: "JavaScript", layer: "front", depth: 3, note: "Fifteen years of it, from jQuery-era storefronts to modern bundlers.", pairs: ["vue","ts"] },
+  { id: "react",sym: "Re", name: "React",      layer: "front", depth: 1, note: "Components and hooks on product work alongside Vue projects.", pairs: ["ts","js"] },
+  { id: "html", sym: "Hc", name: "HTML & CSS", layer: "front", depth: 3, note: "Semantic, accessible markup and responsive layouts without leaning on a framework.", pairs: ["liquid","js"] },
+  { id: "liquid",sym:"Lq", name: "Liquid",     layer: "front", depth: 2, note: "Shopify themes built from Figma: account templates, product pages, checkout tweaks within Shopify's limits.", pairs: ["shopify","html"] },
+  { id: "swift",sym: "Sw", name: "SwiftUI",    layer: "front", depth: 1, note: "Building my own iOS game, Cachalot Bay.", pairs: ["claudecode"] },
+
+  // Data & search
+  { id: "pg",   sym: "Pg", name: "PostgreSQL", layer: "data", depth: 3, note: "Schema design, query tuning and migrations for service-owned databases.", pairs: ["nest","node"] },
+  { id: "mysql",sym: "My", name: "MySQL",      layer: "data", depth: 3, note: "Years of production MySQL behind PHP apps and stores. Untangling slow multi-join reports and NULL surprises in aggregates.", pairs: ["php","woo"] },
+  { id: "mongo",sym: "Mo", name: "MongoDB",    layer: "data", depth: 2, note: "Document stores for catalogs, logs and flexible event payloads.", pairs: ["node"] },
+  { id: "es",   sym: "Es", name: "Elasticsearch", layer: "data", depth: 2, note: "Product search, filtering and log analytics: mappings, analyzers, reindexing without downtime.", pairs: ["node","php"] },
+  { id: "ch",   sym: "Ch", name: "ClickHouse", layer: "data", depth: 1, note: "Analytics workloads where row stores give up.", pairs: ["es","pg"] },
+
+  // Infra & delivery
+  { id: "docker",sym:"Dk", name: "Docker",     layer: "infra", depth: 3, note: "Every project I touch runs locally in containers and ships the same way.", pairs: ["aws","ci"] },
+  { id: "aws",  sym: "Aw", name: "AWS",        layer: "infra", depth: 2, note: "ECS, Lambda, S3, SQS, RDS, CloudWatch. Keeping bills sensible is part of the job.", pairs: ["docker","nest"] },
+  { id: "rabbit",sym:"Rq", name: "RabbitMQ",   layer: "infra", depth: 2, note: "Queues between services: retries, dead letters, keeping payment and order events from getting lost.", pairs: ["nest","node","php"] },
+  { id: "ci",   sym: "Ci", name: "CI/CD",      layer: "infra", depth: 2, note: "Pipelines with tests, linting and safe deploys. GitHub Actions and GitLab CI.", pairs: ["docker"] },
+  { id: "otel", sym: "Ot", name: "OpenTelemetry", layer: "infra", depth: 1, note: "Tracing requests across services so incidents take minutes to locate, not hours.", pairs: ["prom","nest"] },
+  { id: "prom", sym: "Gf", name: "Prometheus & Grafana", layer: "infra", depth: 1, note: "Metrics and dashboards that someone actually looks at.", pairs: ["otel"] },
+
+  // Payments
+  { id: "nmi",  sym: "Nm", name: "NMI",        layer: "pay", depth: 3, note: "Gateway integration end to end: tokenization, sale/auth/capture, refunds, voids, recurring billing.", pairs: ["pos","php"] },
+  { id: "wp_pay",sym:"Wl", name: "Worldpay",   layer: "pay", depth: 3, note: "Card-present and online flows, settlement reports and the edge cases that only show up in production.", pairs: ["pos","nmi"] },
+  { id: "pos",  sym: "Po", name: "POS systems",layer: "pay", depth: 3, note: "Point-of-sale software where the terminal, the gateway and the back office all have to agree.", pairs: ["nmi","wp_pay"] },
+  { id: "stripe",sym:"St", name: "Stripe",     layer: "pay", depth: 2, note: "Checkouts and webhooks, plus digging into decline data: generic_decline patterns, Link issues, duplicate attempts.", pairs: ["rest","shopify"] },
+  { id: "paypal",sym:"Pp", name: "PayPal",     layer: "pay", depth: 2, note: "Checkout integrations and IPN/webhook handling.", pairs: ["woo","stripe"] },
+
+  // CMS & commerce
+  { id: "wp",   sym: "Wp", name: "WordPress",  layer: "cms", depth: 2, note: "Plugin author on wordpress.org. Custom plugins, hooks, admin UX and the plugin review process.", pairs: ["woo","php"] },
+  { id: "woo",  sym: "Wc", name: "WooCommerce",layer: "cms", depth: 2, note: "Store builds, REST API work, shipping zones, silent email failures and order sync with CRMs.", pairs: ["wp","mysql","paypal"] },
+  { id: "shopify",sym:"Sh",name: "Shopify",    layer: "cms", depth: 2, note: "Theme development and a full migration from WooCommerce: products, redirects, DNS.", pairs: ["liquid","py","stripe"] },
+  { id: "drupal",sym:"Dr", name: "Drupal",     layer: "cms", depth: 2, note: "Contrib module maintenance and releases on drupal.org.", pairs: ["php"] },
+  { id: "presta",sym:"Ps", name: "PrestaShop", layer: "cms", depth: 1, note: "Module maintenance for an email platform integration.", pairs: ["php"] },
+  { id: "joomla",sym:"Jo", name: "Joomla",     layer: "cms", depth: 1, note: "Extension maintenance for an email platform integration.", pairs: ["php"] },
+  { id: "okay", sym: "Ok", name: "OkayCMS",    layer: "cms", depth: 2, note: "Where I spent my early years: an e-commerce CMS, written in PHP, used by hundreds of stores.", pairs: ["php","mysql"] },
+
+  // AI tooling
+  { id: "claude",sym:"Cl", name: "Claude API", layer: "ai", depth: 2, note: "LLM features inside products and internal tools.", pairs: ["ts","node"] },
+  { id: "claudecode",sym:"Cc", name: "Claude Code", layer: "ai", depth: 2, note: "Daily agentic coding with project-level instructions, in the terminal and in PhpStorm.", pairs: ["cursor"] },
+  { id: "cursor",sym:"Cu", name: "Cursor",     layer: "ai", depth: 2, note: "AI-assisted editing for refactors and test writing.", pairs: ["claudecode"] }
+];
+
+const PROBLEMS = [
+  { id: "payments", label: "Payments & POS",
+    title: "Payment and POS integrations",
+    text: "Gateways, terminals and checkouts that have to be right every time. I integrate the provider, then build the retries, reconciliation and alerts that keep money moving when it misbehaves.",
+    tech: ["nmi","wp_pay","pos","stripe","paypal","php","node","ts","pg","mysql","rabbit","rest"] },
+  { id: "micro", label: "Monolith to services",
+    title: "Taking a monolith apart",
+    text: "Extracting functionality from a big PHP monolith into NestJS services, one slice at a time, without freezing feature work. Then making the new pieces observable.",
+    tech: ["php","nest","ts","node","rabbit","pg","docker","aws","ci","otel","prom"] },
+  { id: "stores", label: "Online stores",
+    title: "Stores and migrations",
+    text: "WooCommerce and Shopify builds, fixes and moves between them: product data, redirects, DNS, payments and the emails customers rely on.",
+    tech: ["woo","wp","shopify","liquid","php","mysql","py","stripe","paypal","html","okay"] },
+  { id: "plugins", label: "Plugins & SDKs",
+    title: "Plugins other people install",
+    text: "Code that runs on thousands of sites I'll never see: CMS plugins and SDKs that need careful versioning, clear docs and graceful failure.",
+    tech: ["wp","woo","drupal","presta","joomla","laravel","php","node","rest"] },
+  { id: "search", label: "Search & analytics",
+    title: "Search and analytics",
+    text: "Fast product search and reporting that doesn't lock the main database.",
+    tech: ["es","ch","pg","mysql","mongo","node"] },
+  { id: "ai", label: "AI in the workflow",
+    title: "AI in the workflow",
+    text: "LLM features inside products, and AI-assisted development that speeds the team up without lowering the bar.",
+    tech: ["claude","claudecode","cursor","ts","node"] }
+];
+
+/* ============================================================ */
+const byId = Object.fromEntries(TECH.map(t => [t.id, t]));
+const layerName = Object.fromEntries(LAYERS.map(l => [l.id, l.name]));
+const depthName = { 3: "Core", 2: "Strong", 1: "Working" };
+const $ = s => document.querySelector(s);
+const table = $("#table"), panel = $("#panel"), body = $("#panelBody");
+let activeTech = null, activeProblem = null;
+
+function dots(d) { return [1,2,3].map(i => `<span class="${i <= d ? "on" : ""}"></span>`).join(""); }
+
+// build table
+let idx = 0;
+table.innerHTML = LAYERS.map(l => `
+  <div class="col" role="group" aria-label="${l.name}">
+    <div class="col-head"><i style="background:var(--${l.id})"></i>${l.name}</div>
+    ${TECH.filter(t => t.layer === l.id).map(t => `
+      <button class="tile t-${t.layer}" data-id="${t.id}" aria-pressed="false" style="--i:${idx++}"
+        aria-label="${t.name}, ${depthName[t.depth]}">
+        <span class="dots" aria-hidden="true">${dots(t.depth)}</span>
+        <span class="sym" aria-hidden="true">${t.sym}</span>
+        <span class="nm" aria-hidden="true">${t.name}</span>
+      </button>`).join("")}
+  </div>`).join("");
+setTimeout(() => table.classList.remove("assemble"), 1600);
+
+// problem chips
+$("#problems").innerHTML = PROBLEMS.map(p =>
+  `<button class="chip" data-p="${p.id}" aria-pressed="false">${p.label}</button>`).join("");
+
+function setDim(ids) {
+  table.querySelectorAll(".tile").forEach(el => {
+    el.classList.toggle("dim", !!ids && !ids.includes(el.dataset.id));
+  });
+}
+function markTile(id) {
+  table.querySelectorAll(".tile").forEach(el => el.setAttribute("aria-pressed", el.dataset.id === id ? "true" : "false"));
+}
+function miniBtn(id) {
+  const t = byId[id];
+  return `<button data-go="${id}" style="background:var(--${t.layer})">${t.name}</button>`;
+}
+
+function showIntro() {
+  body.innerHTML = `
+    <div class="big" style="background:var(--lang);color:var(--lang-ink)">${TECH.length}</div>
+    <h3>${TECH.length} technologies, 7 layers</h3>
+    <p class="empty-hint" style="margin-top:12px">Click any tile for the story behind it. <strong>Pick a problem</strong> above to light up the tools I'd use for it.</p>
+    <div class="pairs-title">Where I'd start</div>
+    <div class="mini">${["php","ts","nest","vue","nmi","woo"].map(miniBtn).join("")}</div>`;
+}
+
+function showTech(id) {
+  const t = byId[id]; activeTech = id;
+  const cur = PROBLEMS.find(p => p.id === activeProblem);
+  if (cur && !cur.tech.includes(id)) {
+    activeProblem = null; setDim(null);
+    document.querySelectorAll("#problems .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
+  }
+  markTile(id);
+  const uses = PROBLEMS.filter(p => p.tech.includes(id));
+  body.innerHTML = `
+    <div class="big" style="background:var(--${t.layer});color:var(--${t.layer}-ink)">${t.sym}</div>
+    <h3>${t.name}</h3>
+    <div class="meta"><span class="tag">${layerName[t.layer]}</span><span class="tag">${depthName[t.depth]}</span></div>
+    <p>${t.note}</p>
+    ${t.pairs.length ? `<div class="pairs-title">Usually paired with</div><div class="mini">${t.pairs.filter(p => byId[p]).map(miniBtn).join("")}</div>` : ""}
+    ${uses.length ? `<div class="pairs-title">Part of</div><div class="mini">${uses.map(p => `<button data-p="${p.id}" style="background:var(--paper)">${p.title}</button>`).join("")}</div>` : ""}`;
+  openPanel();
+}
+
+function showProblem(pid) {
+  const p = PROBLEMS.find(x => x.id === pid);
+  document.querySelectorAll("#problems .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.p === pid ? "true" : "false"));
+  if (!p) { activeProblem = null; setDim(null); showIntro(); return; }
+  activeProblem = pid; $("#search").value = ""; setDim(p.tech); markTile(null);
+  body.innerHTML = `
+    <h3>${p.title}</h3>
+    <p style="margin-top:12px">${p.text}</p>
+    <div class="pairs-title">Tools I bring (${p.tech.length})</div>
+    <div class="mini">${p.tech.map(miniBtn).join("")}</div>`;
+  openPanel();
+}
+
+function openPanel() { panel.classList.add("open"); }
+$("#panelClose").addEventListener("click", () => panel.classList.remove("open"));
+
+table.addEventListener("click", e => {
+  const tile = e.target.closest(".tile"); if (tile) showTech(tile.dataset.id);
+});
+$("#problems").addEventListener("click", e => {
+  const c = e.target.closest(".chip"); if (!c) return;
+  showProblem(activeProblem === c.dataset.p ? null : c.dataset.p);
+});
+body.addEventListener("click", e => {
+  const go = e.target.closest("[data-go]"); if (go) { showTech(go.dataset.go); return; }
+  const p = e.target.closest("[data-p]"); if (p) showProblem(p.dataset.p);
+});
+$("#search").addEventListener("input", e => {
+  const q = e.target.value.trim().toLowerCase();
+  activeProblem = null;
+  document.querySelectorAll("#problems .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
+  if (!q) { setDim(null); return; }
+  const hits = TECH.filter(t => (t.name + " " + t.sym + " " + t.note).toLowerCase().includes(q)).map(t => t.id);
+  setDim(hits);
+  if (hits.length === 1) showTech(hits[0]);
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") panel.classList.remove("open"); });
+
+showIntro();
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
