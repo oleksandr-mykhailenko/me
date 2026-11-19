@@ -2,7 +2,7 @@
 
 Personal site of Oleksa Mykhailenko: interactive engineering CV (`index.html`) and audit & consulting page (`audit.html`).
 
-Plain HTML, CSS and JS. No build step.
+Plain HTML, CSS and JS. No build step. Visual style shared with the Cachalot Bay page (Fredoka + Nunito, ocean gradient). Photos live in `assets/img/`.
 
 ## Publish on GitHub Pages
 1. Push these files to the `main` branch.

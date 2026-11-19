@@ -7,7 +7,7 @@
 <meta name="description" content="Interactive CV of Oleksa Mykhailenko, senior fullstack engineer: PHP, TypeScript, NestJS, Vue, payments, e-commerce and microservices.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -24,21 +24,26 @@
   </header>
 
   <section class="hero">
+    <div class="rays" aria-hidden="true"></div>
     <div class="hero-row">
       <div>
         <h1>I build and fix the systems behind online businesses.</h1>
-        <p class="lede">Senior fullstack engineer with 15 years in PHP, TypeScript and everything around them: payments, POS, e-commerce, plugins and microservices.</p>
+        <p class="lede">Hi, I'm Oleksa. Senior fullstack engineer with 15 years in PHP, TypeScript and everything around them: payments, POS, e-commerce, plugins and microservices.</p>
         <div class="hero-actions">
           <a class="btn" href="#stack">Explore my stack</a>
           <a class="btn ghost" href="audit.html">Book an audit</a>
         </div>
+        <ul class="facts">
+          <li>Alanya, Turkey</li>
+          <li>Senior / Tech Lead</li>
+          <li>Payments &amp; SaaS</li>
+          <li>Remote roles and projects</li>
+        </ul>
       </div>
-      <ul class="facts">
-        <li><b>Based in</b>Alanya, Turkey, working remotely</li>
-        <li><b>Level</b>Senior / Tech Lead</li>
-        <li><b>Strongest in</b>Payments and SaaS backends</li>
-        <li><b>Open to</b>Remote roles and projects</li>
-      </ul>
+      <figure class="portrait" style="margin:0">
+        <img src="assets/img/portrait.jpg" alt="Portrait of Oleksa Mykhailenko" width="900" height="1350">
+        <div class="bubble">15 years of shipping<span>PHP, TypeScript, payments</span></div>
+      </figure>
     </div>
   </section>
 
@@ -80,35 +85,42 @@
       </div>
     </div>
     <div class="projects">
-      <a class="proj main" href="https://wordpress.org/plugins/oleksa-sync-for-keycrm/" target="_blank" rel="noopener">
-        <div>
-          <h3>Oleksa Sync for KeyCRM</h3>
-          <p style="margin-top:14px">A free WordPress plugin that keeps WooCommerce orders, products and stock in sync with KeyCRM. Reviewed and published in the wordpress.org plugin directory, with a usage guide built into the admin.</p>
-        </div>
-        <span class="where">View on wordpress.org</span>
-      </a>
-      <a class="proj sky" href="https://github.com/mailjet" target="_blank" rel="noopener">
-        <h3>Mailjet integrations</h3>
-        <p>Maintaining Mailjet plugins and SDKs for Drupal, WordPress, PrestaShop, Laravel, Joomla and Node.js, including releases of the Drupal contrib module.</p>
-        <span class="where">Mailjet on GitHub</span>
-      </a>
-      <a class="proj sea" href="https://github.com/oleksandr-mykhailenko/cachalot-bay" target="_blank" rel="noopener">
+      <a class="proj whale" href="https://oleksandr-mykhailenko.github.io/cachalot-bay/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 240 120" aria-hidden="true">
+          <path d="M20 46c0-14 12-24 30-24h70c28 0 48 10 64 26l20 18 18-14c4-3 8 0 6 4l-8 16 8 16c2 4-2 7-6 4l-18-14-20 14c-16 12-34 18-60 18H58C34 110 20 96 20 78z" fill="#e8f4fb"/>
+          <path d="M20 70h96c20 0 40 4 58 12-16 16-36 24-62 24H58C38 106 24 94 20 80z" fill="#b9d8ee"/>
+          <circle cx="48" cy="52" r="5" fill="#1d2b45"/><circle cx="50" cy="50" r="1.6" fill="#fff"/>
+          <ellipse cx="62" cy="66" rx="7" ry="4" fill="#ff8a75" opacity=".6"/>
+          <circle cx="34" cy="14" r="4" fill="#fff" opacity=".8"/><circle cx="44" cy="6" r="2.5" fill="#fff" opacity=".7"/>
+        </svg>
         <h3>Cachalot Bay</h3>
-        <p>An iOS game in progress about the sperm whales off Mauritius, built from my own underwater filming trips.</p>
-        <span class="where">Project page</span>
+        <p>My iOS game about the resident sperm whales off Mauritius. You run boats, rules, money and research, and the whales respond to what you do.</p>
+        <span class="where">Visit the game page</span>
       </a>
+      <div class="proj-side">
+        <div class="proj cream">
+          <h3>Oleksa Sync for KeyCRM</h3>
+          <p>A free WordPress plugin that keeps WooCommerce orders, products and stock in sync with KeyCRM. Published in the wordpress.org plugin directory.</p>
+        </div>
+        <div class="proj mint">
+          <h3>Mailjet integrations</h3>
+          <p>Maintaining Mailjet plugins and SDKs for Drupal, WordPress, PrestaShop, Laravel, Joomla and Node.js.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section>
     <div class="contact">
+      <img class="avatar" src="assets/img/avatar.jpg" alt="" width="150" height="150">
       <div>
         <h2>Need a senior engineer on your team or project?</h2>
-        <p>Remote, full-time or project-based. I'm happiest where architecture gets debated and knowledge gets shared.</p>
-      </div>
-      <div class="links">
-        <a class="btn" href="https://www.threads.net/@oleksa_mykhailenko" target="_blank" rel="noopener">Message me on Threads</a>
-        <a class="btn ghost" href="https://github.com/oleksandr-mykhailenko" target="_blank" rel="noopener">GitHub</a>
+        <p>Remote, full-time or project-based. I'm happiest where architecture gets debated and knowledge gets shared. Write to me wherever suits you.</p>
+        <div class="socials">
+          <a class="social" href="https://www.instagram.com/oleksa_mykhailenko/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".65" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="17.3" cy="6.7" r="1.2" fill="#fff"/></svg><span>Instagram<small>@oleksa_mykhailenko</small></span></a>
+          <a class="social" href="https://t.me/oleksa_mykhailenko" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2AABEE"/><path d="M5.4 11.7l11.2-4.3c.5-.2 1 .1.8.9l-1.9 9c-.1.6-.5.8-1 .5l-2.9-2.1-1.4 1.3c-.2.2-.3.3-.6.3l.2-2.9 5.4-4.9c.2-.2 0-.3-.3-.1l-6.7 4.2-2.9-.9c-.6-.2-.6-.6.1-1z" fill="#fff"/></svg><span>Telegram<small>@oleksa_mykhailenko</small></span></a>
+          <a class="social" href="https://github.com/oleksandr-mykhailenko" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1d2b45" d="M12 1.5a10.5 10.5 0 00-3.3 20.5c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.4-3.5-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.2 3.1.9.1-.7.4-1.2.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 015.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10.5 10.5 0 0012 1.5z"/></svg><span>GitHub<small>oleksandr-mykhailenko</small></span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -279,7 +291,7 @@ function showTech(id) {
     <div class="meta"><span class="tag">${layerName[t.layer]}</span><span class="tag">${depthName[t.depth]}</span></div>
     <p>${t.note}</p>
     ${t.pairs.length ? `<div class="pairs-title">Usually paired with</div><div class="mini">${t.pairs.filter(p => byId[p]).map(miniBtn).join("")}</div>` : ""}
-    ${uses.length ? `<div class="pairs-title">Part of</div><div class="mini">${uses.map(p => `<button data-p="${p.id}" style="background:var(--paper)">${p.title}</button>`).join("")}</div>` : ""}`;
+    ${uses.length ? `<div class="pairs-title">Part of</div><div class="mini">${uses.map(p => `<button data-p="${p.id}" style="background:#fff">${p.title}</button>`).join("")}</div>` : ""}`;
   openPanel();
 }
 
