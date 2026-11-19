@@ -63,11 +63,6 @@
     <div class="stack-layout">
       <div>
         <div class="table assemble" id="table"></div>
-        <div class="legend" aria-label="Depth legend">
-          <span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span>Core: daily, years deep</span>
-          <span><span class="dots"><i class="on"></i><i class="on"></i><i></i></span>Strong: shipped to production many times</span>
-          <span><span class="dots"><i class="on"></i><i></i><i></i></span>Working: used on real projects</span>
-        </div>
       </div>
 
       <aside class="panel" id="panel" aria-live="polite">
@@ -233,7 +228,6 @@ const $ = s => document.querySelector(s);
 const table = $("#table"), panel = $("#panel"), body = $("#panelBody");
 let activeTech = null, activeProblem = null;
 
-function dots(d) { return [1,2,3].map(i => `<span class="${i <= d ? "on" : ""}"></span>`).join(""); }
 
 // build table
 let idx = 0;
@@ -242,8 +236,7 @@ table.innerHTML = LAYERS.map(l => `
     <div class="col-head"><i style="background:var(--${l.id})"></i>${l.name}</div>
     ${TECH.filter(t => t.layer === l.id).map(t => `
       <button class="tile t-${t.layer}" data-id="${t.id}" aria-pressed="false" style="--i:${idx++}"
-        aria-label="${t.name}, ${depthName[t.depth]}">
-        <span class="dots" aria-hidden="true">${dots(t.depth)}</span>
+        aria-label="${t.name}">
         <span class="sym" aria-hidden="true">${t.sym}</span>
         <span class="nm" aria-hidden="true">${t.name}</span>
       </button>`).join("")}
@@ -288,7 +281,7 @@ function showTech(id) {
   body.innerHTML = `
     <div class="big" style="background:var(--${t.layer});color:var(--${t.layer}-ink)">${t.sym}</div>
     <h3>${t.name}</h3>
-    <div class="meta"><span class="tag">${layerName[t.layer]}</span><span class="tag">${depthName[t.depth]}</span></div>
+    <div class="meta"><span class="tag">${layerName[t.layer]}</span></div>
     <p>${t.note}</p>
     ${t.pairs.length ? `<div class="pairs-title">Usually paired with</div><div class="mini">${t.pairs.filter(p => byId[p]).map(miniBtn).join("")}</div>` : ""}
     ${uses.length ? `<div class="pairs-title">Part of</div><div class="mini">${uses.map(p => `<button data-p="${p.id}" style="background:#fff">${p.title}</button>`).join("")}</div>` : ""}`;
@@ -336,5 +329,6 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") panel.classL
 showIntro();
 $("#year").textContent = new Date().getFullYear();
 </script>
+<script src="assets/ocean.js"></script>
 </body>
 </html>

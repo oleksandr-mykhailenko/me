@@ -10,6 +10,6 @@ Plain HTML, CSS and JS. No build step. Visual style shared with the Cachalot Bay
 3. The site appears at `https://oleksandr-mykhailenko.github.io/me/`.
 
 ## Editing content
-- Stack tiles, depth levels and problem lenses: `TECH`, `LAYERS`, `PROBLEMS` at the bottom of `index.html` (depth 3 = core, 2 = strong, 1 = working).
+- Stack tiles, depth levels and problem lenses: `TECH`, `LAYERS`, `PROBLEMS` at the bottom of `index.html`.
 - Audit areas, symptoms and sample findings: `AREAS`, `SYMPTOMS`, `FINDINGS` at the bottom of `audit.html`.
 - Colors and type: tokens at the top of `assets/style.css`.

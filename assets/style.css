@@ -146,27 +146,19 @@ section { padding: 76px 0; }
 }
 .tile .sym { font-family: var(--head); font-size: clamp(22px, 2.3vw, 30px); font-weight: 600; line-height: 1; }
 .tile .nm { font-size: 12.5px; font-weight: 700; line-height: 1.15; opacity: .85; }
-.tile .dots { position: absolute; top: 10px; right: 10px; display: flex; gap: 3px; }
-.tile .dots span { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .2; }
-.tile .dots span.on { opacity: .85; }
 .tile:hover { transform: translateY(-3px); }
 .tile[aria-pressed="true"] { box-shadow: 0 0 0 3px var(--coral), 0 10px 24px rgba(15,36,64,.3); }
 .tile.dim { opacity: .2; filter: saturate(.2); }
 .tile.dim:hover { opacity: .5; }
 
-.t-lang { background: var(--lang); } .t-lang .dots, .t-lang .sym { color: var(--lang-ink); }
-.t-front { background: var(--front); } .t-front .dots, .t-front .sym { color: var(--front-ink); }
-.t-data { background: var(--data); } .t-data .dots, .t-data .sym { color: var(--data-ink); }
-.t-infra { background: var(--infra); } .t-infra .dots, .t-infra .sym { color: var(--infra-ink); }
-.t-pay { background: var(--pay); } .t-pay .dots, .t-pay .sym { color: var(--pay-ink); }
-.t-cms { background: var(--cms); } .t-cms .dots, .t-cms .sym { color: var(--cms-ink); }
-.t-ai { background: var(--ai); } .t-ai .dots, .t-ai .sym { color: var(--ai-ink); }
+.t-lang { background: var(--lang); } .t-lang .sym { color: var(--lang-ink); }
+.t-front { background: var(--front); } .t-front .sym { color: var(--front-ink); }
+.t-data { background: var(--data); } .t-data .sym { color: var(--data-ink); }
+.t-infra { background: var(--infra); } .t-infra .sym { color: var(--infra-ink); }
+.t-pay { background: var(--pay); } .t-pay .sym { color: var(--pay-ink); }
+.t-cms { background: var(--cms); } .t-cms .sym { color: var(--cms-ink); }
+.t-ai { background: var(--ai); } .t-ai .sym { color: var(--ai-ink); }
 
-.legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 20px; font-size: 14px; color: var(--soft); }
-.legend span { display: inline-flex; align-items: center; gap: 7px; }
-.legend .dots { display: inline-flex; gap: 3px; }
-.legend .dots i { width: 6px; height: 6px; border-radius: 50%; background: #fff; opacity: .25; }
-.legend .dots i.on { opacity: .9; }
 
 @media (prefers-reduced-motion: no-preference) {
   .table.assemble .tile { animation: rise .55s cubic-bezier(.2,.8,.25,1.15) backwards; animation-delay: calc(var(--i) * 22ms); }
@@ -333,3 +325,16 @@ footer.foot { padding: 30px 0 46px; color: rgba(255,255,255,.6); font-size: 14px
   .symptom-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
 }
+
+/* ---------- Ambient sea life ---------- */
+.sea { position: fixed; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; }
+
+.critter { position: absolute; will-change: transform, opacity; filter: drop-shadow(0 6px 12px rgba(15, 36, 64, .25)); }
+.critter svg { width: 100%; height: auto; display: block; }
+.critter.fish svg, .critter.turtle svg { animation: wiggle 1.4s ease-in-out infinite; }
+.critter.whale svg { animation: wiggle 3.2s ease-in-out infinite; }
+.critter.jelly svg { animation: pulse 2.2s ease-in-out infinite; transform-origin: 50% 20%; }
+.critter.jelly .t { animation: sway 2.2s ease-in-out infinite; transform-origin: top; }
+@keyframes wiggle { 50% { transform: translateY(-4px) rotate(-3deg); } }
+@keyframes pulse { 50% { transform: scale(1.06, .92); } }
+@keyframes sway { 50% { transform: skewX(8deg); } }
